@@ -130,6 +130,8 @@ h1, .caption{
 
 
 /*index page styling*/
+
+
 .profile{
   box-sizing: border-box;
   max-width:90%;
@@ -142,6 +144,7 @@ h1, .caption{
   width:18%;
   margin-right:40px;
   padding-top: 20px;
+  border-radius: 15%;
 }
 .profile-text{
   box-sizing: border-box;
