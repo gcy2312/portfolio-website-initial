@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width" initial-scale="1">
+
       <title> Contact Genevieve Cyr </title>
       <link rel="shortcut icon" href="./img/favicon-32x32.png">
 
@@ -10,7 +10,8 @@
 
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap" rel="stylesheet">
 
-      <link rel="stylesheet" type="text/css" href="css/style.production.css">
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
   <body>
@@ -43,10 +44,9 @@
     </div>
   <!-- create button for contact using <a href="mailto:email>Contact Me</a>-->
   <br>
-  <a href="mailto:gma.cyr@gmail.com">
-  <button>Contact Me Directly</button></a>
-
-  <form action="" class="contact-form" method="post">
+  <a id="direct__button" href="mailto:nxtgen.sound@gmail.com">Contact Me Directly</a>
+<!--form action point to non-existent-->
+  <form action="/contact_page.php" class="contact-form" method="post">
     <label class="standard-label" for="contact-email">*E-mail:</label><br>
       <input type="email" id="contact-email" required><br>
     <label class="standard-label" for="contact-telephone">Telephone</label><br>
@@ -57,7 +57,7 @@
     </form>
     <br>
 
-  <img src="img/skyline_binary.svg" class="skyline">
+  <img src="img/skyline_binary.svg" class="skyline" alt="image of skyline">
 
 
 
@@ -75,6 +75,5 @@
   <script src="js/tota11y.min.js">
   </script>
 
-  </body>
 </body>
 </html>
