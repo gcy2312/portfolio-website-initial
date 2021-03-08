@@ -330,17 +330,27 @@ section {
     margin: 20px;
     display: inline-block;
     float: left;
-    width: 100%;
+    width: 95%;
+    margin-right: 20px;
   }
 
   .skills-table {
-    margin-left: 40px;
+    margin-left: 20px;
     margin-right: auto;
     display: inline-block;
+    justify-content: center;
   }
 
   .caption {
     font-size: 22px;
     font-weight: 600;
+  }
+}
+
+/* contact page media queries */
+@media all and (max-width: 750px) {
+  img.skyline {
+    width: 80%;
+    justify-content: center;
   }
 }
