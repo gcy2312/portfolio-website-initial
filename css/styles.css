@@ -41,7 +41,7 @@ a:active {
 
 a[href^="mailto"],
 a[href^="skype"],
-a[href^="+14387634522"],
+a[href^="+1(234)567-9812"],
 a[href^="#"] {
   color: var(--link-color);
 }
