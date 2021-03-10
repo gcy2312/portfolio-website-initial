@@ -35,7 +35,7 @@ a[href^="skype"] {
   color: #5cab72;
 }
 
-a[href^="+1(234)567-9812"] {
+a[href^="+12345679812"] {
   color: #5cab72;
 }
 
