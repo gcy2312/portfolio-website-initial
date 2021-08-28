@@ -1,63 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="utf-8">
-      <title> GC Portfolio </title>
-      <link rel="shortcut icon" href="./img/favicon-32x32.png">
 
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<head>
+  <meta charset="utf-8">
+  <title> GC Portfolio </title>
+  <link rel="shortcut icon" href="./img/favicon-32x32.png">
 
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
-      <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap" rel="stylesheet">
 
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    </head>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-  <body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <header class="page-header">
-      <!--add logo here-->
-      <img src="img/logo.png" class="page-header__item" alt="Logo of initials G C enclosed in angle brakcets">
-      <nav class="page-header__item">
-        <ul role="menubar" class="navigation-list">
-          <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
-          </li>
-          <li role="presentation">
-            <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
-          </li>
-          <li role="presentation">
-            <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
-          </li>
-          <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-          </li>
+</head>
+
+<body>
+
+  <header class="page-header">
+    <!--add logo here-->
+    <img src="img/logo.png" id="nav-img" class="page-header__item"
+         alt="Logo of initials G C enclosed in angle brakcets">
+    <nav class="page-header__item">
+      <ul role="menubar" class="nav justify-content-end">
+        <li class="nav-item" role="presentation">
+          <a href="index.html" role="menuitem" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a href="about.html" role="menuitem" class="nav-link">About</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a href="work.html" role="menuitem" class="nav-link">Work</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a href="contact.html" role="menuitem" class="nav-link">Contact</a>
+        </li>
       </ul>
     </nav>
-    </header>
-
-    <main class="profile">
-      <!--add picture of me-->
+  </header>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+      <main class="profile">
+        <!--add picture of me-->
         <img src="img/gc-portrait.png" class="profile__portrait" alt="A photograph of web developer Genevieve Cyr">
-        <h1 class="profile-text">Genevieve Cyr - Web Developer</h1>
-        <p class="profile-text">Welcome to my portfolio website. I am a <span>web developer</span> from Canada.  Click the link below to preview some of my work!
-        <br><a href="#">Portfolio Projects</a>
+        <h1 id="profile-title" class="profile-text">Genevieve Cyr - Web Developer</h1></br>
+        <p class="profile-text">Welcome to my portfolio website. I am a full stack <span>web developer</span> from
+          Canada. I look forward to working with your team to help create, maintain, and enhance your products. Click
+          the
+          link below to preview some of my work!
+          <br> <a type="button" class="btn btn-link" href="https://github.com/gcy2312?tab=repositories">Portfolio
+            Projects</a>
         </p>
-    </main>
+      </main>
+    </div>
+  </div>
 
-    <footer class="page-footer">
-      <p>Find me on:
+  <footer class="page-footer">
+    <p class="findme">Find me on:
       <br>
-      <img src="img/github_icon.svg" alt="Github">
-      <img src="img/twitter_icon.svg" alt="Twitter">
-      <img src="img/linkedin_icon.svg" alt="Linkedin">
-      </p>
-    </footer>
+      <a type="button" href="https://github.com/gcy2312?tab=repositories">
+        <img class="footer-icons" src="img/github_icon.svg" alt="Github">
+      </a>
+      <a type="button" href="https://www.linkedin.com/in/genevieve-cyr-08553739/">
+        <img class="footer-icons" src="img/linkedin-icon.png" alt="Linkedin">
+      </a>
+      <a type="button" href="mailto:gma.cyr@gmail.com">
+        <img class="footer-icons" src="img/email-icon.png" alt="email">
+      </a>
+    </p>
+  </footer>
 
 
-  
 
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+          crossorigin="anonymous"></script>
+</body>
+
 </html>
