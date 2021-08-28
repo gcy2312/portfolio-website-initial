@@ -39,7 +39,7 @@ a:active {
   color: var(--orange);
 }
 
-a[href^="mailto"],
+a[href^="mailto"], 
 a[href^="skype"],
 a[href^="+12345679812"],
 a[href^="#"] {
@@ -71,14 +71,15 @@ button,
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid var(--button-shadow);
-  transition-duration: 0.3s;
-  transition-property: opacity;
+  transition: transform .2s; /* Animation */
 }
 
 button:hover,
 button:focus {
   cursor: pointer;
-  opacity: 0.75;
+  font-weight:500;
+  transform: bolder;
+  transform: scale(1.1);
 }
 
 /* header styling */
@@ -87,32 +88,27 @@ button:focus {
   display: flex;
   width: 100%;
   padding: 20px;
+  margin-bottom: 15px;
 }
 
-.page-header__item {
+ .page-header__item {
   flex: 0 1 200px;
-}
+} 
 
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
-}
+} 
 
-.navigation-list {
-  list-style-type: none;
-}
-
-.navigation-list li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-.navigation-list__item {
+.nav-link {
   color: var(--text-color);
   text-decoration: underline;
 }
+.nav-link:hover, .navlink:focus{
+  color: var(--orange);
+}
 
-.navigation-list__item--active {
+.active {
   color: var(--orange);
   text-decoration: none;
 }
@@ -128,17 +124,17 @@ button:focus {
   text-align: center;
   align-items: center;
 }
+.footer-icons{
+  margin-top: 10px;
+  width: 55px;
+  transition: transform .2s; /* Animation */
+}
+.footer-icons:hover{
+ transform: scale(1.3);
+}
 
 /* title animation */
 
-h1,
-.caption {
-  animation-duration: 1s;
-  animation-name: color;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-}
 
 @keyframes color {
   from { color: var(--bg-color); }
@@ -184,18 +180,9 @@ h1,
 
 .contact-form {
   box-sizing: border-box;
-  display: inline-block;
-  float: right;
-  padding: 40px;
-}
-
-.skyline {
-  width: auto;
-  height: 200px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes color-change {
@@ -212,33 +199,10 @@ h1,
   }
 }
 
-.skyline {
-  animation-duration: 10s;
-  animation-name: color-change;
-  animation-iteration-count: 1.5;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-}
 
 /* about page styling */
 .about-description {
   box-sizing: border-box;
-  margin-right: 10px;
-  float: right;
-  width: 45%;
-}
-
-.skills-table {
-  box-sizing: border-box;
-  margin-left: 20px;
-  float: left;
-  width: 45%;
-  text-align: center;
-}
-
-.caption {
-  font-weight: var(--header-weight);
-  font-size: var(--header-size);
 }
 
 /* work page grid styling */
@@ -246,10 +210,13 @@ section {
   margin: 40px;
 }
 
-/* grid fallback */
-.grid__item {
+.card{
+  background-color: #1a1a1e;
+  border-radius: 10px;
+  border: 10px;
   display: inline-block;
-  width: 33%;
+  padding: 15px;
+  width: auto;
 }
 
 /* grid layout */
@@ -259,17 +226,39 @@ section {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
-
-.grid__item {
-  background-color: var(--bg-darker);
-  padding: 15px;
-  width: auto;
+.icons{
+  margin: 20px;
 }
 
-.grid__item:last-child {
+
+.card:last-child {
   grid-column: 3/3;
-  grid-row: 1/3;
+  grid-row: 2/3;
 }
+.card-title{
+  color: #dd6929;
+}
+.card-img-top{
+  padding-bottom: 5px;
+}
+.btn-link{
+  color:#dd6929;
+  font-size: var(--text-size);
+  transition: transform .2s; /* Animation */
+}
+.btn-link:hover{
+  color: #dd6929;
+  transform: scale(1.2);
+}
+.links{
+ display: flex;
+ justify-content:space-between;
+ transition: transform .2s; /* Animation */
+}
+.links:hover{
+  transform: bolder;
+}
+
 
 /* responsive media queries */
 
@@ -285,13 +274,18 @@ section {
     grid-template-columns: 1fr 1fr;
   }
 }
+@media all and (max-width: 500px) {
+  .nav{
+    flex-direction: column;
+  }
+}
 
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
 
-  .grid__item:last-child {
+  .card:last-child {
     grid-column: auto/auto;
     grid-row: auto/auto;
   }
@@ -299,35 +293,60 @@ section {
   h1 {
     font-size: 22px;
   }
+
+  .profile {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-left: 20px;
+  display:block;
+  justify-content: center;
+}
+#profile-title{ 
+  width: 50px;
+  padding-top: 15px;
+}
+
+.profile__portrait {
+  box-sizing: border-box;
+  display: inline;
+  clear: both;
+  flex-direction: row;
+  width: 30%;
+  padding-right: 5px; 
+  margin-right: 5px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 15%;
+}
+
+.profile-text {
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  padding: 0 40px 0 0;
+  margin-left: 20px;
+}
 }
 
 /* about page media queries */
 @media all and (max-width: 750px) {
   .about-description {
     margin: 20px;
-    display: inline-block;
     float: left;
     width: 95%;
     margin-right: 20px;
   }
-
-  .skills-table {
-    margin-left: 20px;
-    margin-right: auto;
-    display: inline-block;
-    justify-content: center;
-  }
-
-  .caption {
-    font-size: 22px;
-    font-weight: 600;
-  }
+  .card{
+    margin-left: none;
 }
 
 /* contact page media queries */
-@media all and (max-width: 750px) {
-  img.skyline {
-    width: 80%;
-    justify-content: center;
+    #nav-img{
+    width: auto;
+    height:60px;
   }
-}
+
+
+
