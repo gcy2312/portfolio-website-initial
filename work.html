@@ -12,7 +12,10 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -21,20 +24,21 @@
 
   <header class="page-header">
     <!--add logo here-->
-    <img src="img/logo.png" class="page-header__item" alt="Logo of initials G C enclosed in angle brakcets">
+    <img src="img/logo.png" id="nav-img" class="page-header__item"
+         alt="Logo of initials G C enclosed in angle brakcets">
     <nav class="page-header__item">
-      <ul role="menubar" class="navigation-list">
-        <li role="presentation">
-          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+      <ul role="menubar" class="nav justify-content-end">
+        <li class="nav-item" role="presentation">
+          <a href="index.html" role="menuitem" class="nav-link">Home</a>
         </li>
-        <li role="presentation">
-          <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
+        <li class="nav-item" role="presentation">
+          <a href="about.html" role="menuitem" class="nav-link">About</a>
         </li>
-        <li role="presentation">
-          <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>
+        <li class="nav-item" role="presentation">
+          <a href="work.html" role="menuitem" class="nav-link active">Work</a>
         </li>
-        <li role="presentation">
-          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        <li class="nav-item" role="presentation">
+          <a href="contact.html" role="menuitem" class="nav-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -42,63 +46,117 @@
 
   <!--table of projects-->
   <section>
-    <h1>Work</h1>
+    <h2>Check out some of my projects!</h2>
     <div class="grid">
       <!--grid items here- change info and names-->
-      <div class="grid__item">
-        <h3>Portfolio Website</h3>
-        <p>Building a portfolio website with multiple pages and CSS styling. Use of CSS and HTML exclusively to create
-          interactive website, ensuring web accessibility and cross-browser support. </p>
-        <a href="#">Github</a>
+
+      <div class="card" style="width: 22rem;">
+        <h3 class="card-title">Client-side ReactJS</h3>
+        <figcaption class="blockquote-footer">
+          <p>ReactJS, Bootstrap, CSS</p>
+        </figcaption>
+        <img src="img/myflix-react.png" class="card-img-top" alt="Imagee of myFlix React app">
+        <p class="card-text">Client-side programming for myFlix app using ReactJS. IMDB functionality, where users can
+          browse and favorite
+          a selection of movies. Uses MERN stack, Bootstrap, CSS.</p>
+        <div class="links">
+          <a type="button" class="btn btn-link" href="https://github.com/gcy2312/myFlix-client">Github</a>
+          <a type="button" class="btn btn-link" href="https://gcy2312-react-myflix.netlify.app/">Live app</a>
+        </div>
       </div>
 
-      <div class="grid__item">
-        <h3>JavaScript App</h3>
-        <p>Lightweight JavaScript application (Pokedex). Uses external API, HTML, CSS, and Bootstrap.</p>
-        <a href="https://github.com/gcy2312/Pokedex">Github</a>
-        <a href="https://gcy2312.github.io/Pokedex/">Live app</a>
+      <div class="card" style="width: 22rem;">
+        <h3 class="card-title">Severless Web App</h3>
+        <figcaption class="blockquote-footer">
+          <p>ReactJS, Jest, Enzyme, AWS Lambda</p>
+        </figcaption>
+        <img src="img/meetapp-img.png" class="card-img-top" alt="image of meet app">
+        <p class="card-text">PWA built using React. App uses Google Calendar API to
+          fetch upcoming events,
+          and AWS Lambda to host serverless functionality. Developped using TDD approach (Jest & Enzyme).</p>
+        <div class="links">
+          <a type="button" class="btn btn-link" href="https://github.com/gcy2312/meet-app">Github</a>
+          <a type="button" class="btn btn-link" href="https://gcy2312.github.io/meet-app/">Live app</a>
+        </div>
       </div>
 
-      <div class="grid__item">
-        <h3>RESTful API</h3>
-        <p>Server-side programming for myFlix app. Built using MERN stack (MongoDB, Express, ReactJS, Node.js, and
+      <div class="card" style="width: 22rem;">
+        <h3 class="card-title">Client-side Angular</h3>
+        <figcaption class="blockquote-footer">
+          <p>AngularCLI, MaterialUI, CSS</p>
+        </figcaption>
+        <img src="img/myflix-angular.png" class="card-img-top" alt="image of myFlix Angular app">
+        <p class="card-text">A re-build of client-side for myFlix app using Angular. Same IMDB functionality implemented
+          using Angular
+          CLI, SCSS,
+          and Material UI.</p>
+        <div class="links">
+          <a type="button" class="btn btn-link" href="https://github.com/gcy2312/myFlix-Angular-client">Github</a>
+          <a type="button" class="btn btn-link" href="https://gcy2312.github.io/myFlix-Angular-client/welcome">Live
+            app</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 22rem;">
+        <h3 class="card-title">JavaScript App</h3>
+        <figcaption class="blockquote-footer">
+          <p>JavaScript, Bootstrap, CSS</p>
+        </figcaption>
+        <img src="img/pokedex-img.png" class="card-img-top" alt="image of Pokedex app">
+        <p class="card=text">Lightweight JavaScript application (Pokedex). Uses external API, HTML, CSS, and Bootstrap.
+        </p>
+        <div class="links">
+          <a type="button" class="btn btn-link" href="https://github.com/gcy2312/Pokedex">Github</a>
+          <a type="button" class="btn btn-link" href="https://gcy2312.github.io/Pokedex/">Live app</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 22rem;">
+        <h3 class="card-title">Native Mobile App</h3>
+        <figcaption class="blockquote-footer">
+          <p>ReactNative, CSS</p>
+        </figcaption>
+        <img src="img/chatapp-img.png" class="card-img-top" alt="image of Chat app">
+        <p class="card-text">Native mobile chat app developped using React Native. Provide users with chat interface
+          (GiftedChat) and
+          functionality to share images, location, and take photo with device camera.</p>
+        <div class="links">
+          <a type="button" class="btn btn-link" href="https://github.com/gcy2312/chat-app">Github</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 22rem;">
+        <h3 class="card-title">RESTful API</h3>
+        <figcaption class="blockquote-footer">
+          <p>MongoDB, ReactJS, Node, Express</p>
+        </figcaption>
+        <p class="card-text">Server-side programming for myFlix app. Built using MERN stack (MongoDB, Express, ReactJS,
+          Node.js), and
           deployed using
           Heroku. </p>
-        <a href="https://github.com/gcy2312/myFlix">Github</a>
+        <div class="links">
+          <a type="button" class="btn btn-link" href="https://github.com/gcy2312/myFlix">Github</a>
+          <a type="button" class="btn btn-link" href="https://myflix-movie-api-2312.herokuapp.com/">Live app</a>
+        </div>
       </div>
 
-      <div class="grid__item">
-        <h3>Client-side ReactJS</h3>
-        <p>Client-side programming for myFlix app using ReactJS. IMDB functionality, where users can browse and favorite
-          a selection of movies. Uses MERN stack, Bootstrap, CSS.</p>
-        <a href="https://github.com/gcy2312/myFlix-client">Github</a>
-        <a href="#">Live app</a>
+      <div class="card" style="width: 22rem;">
+        <h3 class="card-title">Portfolio Website</h3>
+        <figcaption class="blockquote-footer">
+          <p>HTML, Bootstrap, CSS</p>
+        </figcaption>
+        <p class="card-text">Building a portfolio website with multiple pages and CSS styling. Use of CSS and HTML
+          exclusively to create
+          interactive website, ensuring web accessibility and cross-browser support. </p>
+        <a type="button" class="btn btn-link" href="https://github.com/gcy2312/portfolio-website-initial">Github</a>
       </div>
 
-      <div class="grid__item">
-        <h3>Severless Web App</h3>
-        <p>Severless Progressive Web App (PWA) built using React. App uses Google Calendar API to fetch upcoming events,
-          and AWS Lambda to host serverless functionality. Developped using TDD approach (Jest & Enzyme).</p>
-        <a href="https://github.com/gcy2312/meet-app">Github</a>
-        <a href="https://gcy2312.github.io/meet-app/">Live app</a>
-      </div>
-
-      <div class="grid__item">
-        <h3>JavaScript Chat App</h3>
-        <p>Description of role in project and tools used</p>
-        <a href="#">Check it out on Github</a>
-      </div>
-
-      <div class="grid__item">
-        <h3>JavaScript Quiz App</h3>
-        <p>Description of role in project and tools used</p>
-        <a href="#">Check it out on Github</a>
-      </div>
-
-      <div class="grid__item">
-        <h3>Your Idea</h3>
-        <p>Let's work on your next idea together! I can help you realize your concepts for web or apps, both frontend
-          and backend using HTML5, CSS3, JavaScript, Node.js, and React. I am enthusiastic and eager to learn, so don't
+      <div class="card" style="width: 22rem;">
+        <h3 class="card-title">Your Idea</h3>
+        <p class="card-text">Let's work on your next idea together! I can help you realize your concepts for web or
+          apps, both frontend
+          and backend using HTML5, CSS3, JavaScript, Node.js, React, and Angular. I am enthusiastic and eager to learn,
+          so don't
           hesitate if there are other programs you need- I am always happy to broaden my skills!</p>
       </div>
 
@@ -107,16 +165,24 @@
   </section>
 
   <footer class="page-footer">
-    <p>Find me on:
+    <p class="findme">Find me on:
       <br>
-      <img src="img/github_icon.svg" alt="Github">
-      <img src="img/twitter_icon.svg" alt="Twitter">
-      <img src="img/linkedin_icon.svg" alt="Linkedin">
+      <a type="button" href="https://github.com/gcy2312?tab=repositories">
+        <img class="footer-icons" src="img/github_icon.svg" alt="Github">
+      </a>
+      <a type="button" href="https://www.linkedin.com/in/genevieve-cyr-08553739/">
+        <img class="footer-icons" src="img/linkedin-icon.png" alt="Linkedin">
+      </a>
+      <a type="button" href="mailto:gma.cyr@gmail.com">
+        <img class="footer-icons" src="img/email-icon.png" alt="email">
+      </a>
     </p>
   </footer>
 
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+          crossorigin="anonymous"></script>
 </body>
 
 </html>
